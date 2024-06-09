@@ -7,12 +7,13 @@
 }
 :root {
 	--hue: 223;
-	--bg: hsl(var(--hue),10%,90%);
-	--fg: hsl(var(--hue),10%,10%);
-	--primary: hsl(var(--hue),90%,50%);
+	--bg: hsl(var(--hue),10%,10%);
+	--fg: hsl(var(--hue),10%,90%);
+	--primary: hsl(var(--hue),90%,70%);
 	--trans-dur: 0.3s;
 	--trans-timing: cubic-bezier(0.65,0,0.35,1);
 }
+
 
 a {
 	color: var(--primary);
@@ -173,14 +174,7 @@ h1 {
 	transform: rotate(0);
 }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: hsl(var(--hue),10%,10%);
-		--fg: hsl(var(--hue),10%,90%);
-		--primary: hsl(var(--hue),90%,70%);
-	}
-}
+
 
 /* 移动端优化 */
 @media (max-width: 600px) {
