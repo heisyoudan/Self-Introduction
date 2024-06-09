@@ -3,6 +3,15 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="../button/buttons.css">
+    <script>
+      // 强制设置夜间模式
+      document.addEventListener('DOMContentLoaded', (event) => {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme)').matches) {
+              document.documentElement.setAttribute('data-theme', 'dark');
+          }
+      });
+  </script>
 </head>
 <body>
   <svg display="none">
@@ -10,8 +19,9 @@
       <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
     </symbol>
   </svg>
+  
   <h1>キャリアタイムライン</h1>
-  <div id="timeline" class="timeline">
+    <div id="timeline" class="timeline">
     <div class="btn-group">
       <button class="btn" type="button" data-action="expand">すべて展開</button>
       <button class="btn" type="button" data-action="collapse">すべて折り畳み</button>
@@ -131,5 +141,8 @@
       </div>
     </div>
   </div>
+  <div class="custom-button-container">
+    <button class="custom-btn btn-3" onclick="window.location.href='index.html'"><span> 戻る</span></button>
+</div>
 </body>
 </html>
