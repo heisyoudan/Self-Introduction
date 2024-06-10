@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>キャリアタイムライン</title>
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="./css/timeline.css">
+    <script src="./js/timeline.js"></script>
+</head>
+<body>
+    <svg display="none">
+        <symbol id="arrow">
+            <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </symbol>
+    </svg>
+    <h1>キャリアタイムライン</h1>
+    <div id="timeline" class="timeline">
+        <div class="btn-group">
+            <button class="btn" type="button" data-action="expand">すべて展開</button>
+            <button class="btn" type="button" data-action="collapse">すべて折りたたむ</button>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item1-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="1970-01-01">12月, 2014</time><br>
+                    <strong class="timeline__title">武漢国測三聯水電設備有限公司</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">プロジェクトマネージャーに従事.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false" aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item2-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="1973-10-17">5月, 2018</time><br>
+                    <strong class="timeline__title">武漢藍海科創技術有限公司</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">VRエンジニアとして、Unityを使用した仮想現実プロジェクトの開発と技術研究に責任を持ちました.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false" aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item3-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2001-09-09">2月, 2019</time><br>
+                    <strong class="timeline__title">中冶智誠（武漢）工程技術有限公司</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">VRおよびARエンジニアとして、Unityを活用して仮想現実プロジェクトの開発と新技術の研究に責任を持ち、同僚たちと共に技術的な問題を克服してきました.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false" aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item4-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2009-02-13">10月, 2022</time><br>
+                    <strong class="timeline__title">能達日本語学校</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">日本に来て、日本語学校で学び、言語能力と文化理解を向上させました。その結果、日本語能力試験N2の資格を取得しました.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__item">
+            <div class="timeline__item-header">
+                <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false" aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
+                    <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                        <use href="#arrow" />
+                    </svg>
+                </button>
+                <span class="timeline__dot"></span>
+                <span id="item5-name" class="timeline__meta">
+                    <time class="timeline__date" datetime="2033-05-18">7月, 2023</time><br>
+                    <strong class="timeline__title">NetWisdom株式会社</strong>
+                </span>
+            </div>
+            <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
+                <div class="timeline__item-body-content">
+                    <p class="timeline__item-p">NetWisdom株式会社で勤務し、SpringMVCやSpringBootなどの技術を活用してWeb開発に従事しました.</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="custom-button-wrapper">
+        <div class="custom-button-container">
+            <button class="custom-btn btn-3"  onclick="location.href='index.html'">
+                <span>戻る</span>
+            </button>
+        </div>
+    </div>
+
+ </body>
+</html>
