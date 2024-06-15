@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>技術スキル</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/skillbar.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <script src="./js/myskill.js"></script>
+</head>
+<body>
+    <ul class="skills-bar-container">
+      <h1>技術スキル</h1>
+        <li>
+            <div class="progressbar-title">
+                <h3>Unity VR Development</h3>
+                <span class="percent" id="unity-vr-percent">100%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressred" id="progress-unity-vr"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>Unity AR Development</h3>
+                <span class="percent" id="unity-ar-percent">100%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressblue" id="progress-unity-ar"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>HTML</h3>
+                <span class="percent" id="html-percent">80%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressgreen" id="progress-html"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>CSS</h3>
+                <span class="percent" id="css-percent">70%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progresspurple" id="progress-css"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>jQuery</h3>
+                <span class="percent" id="jquery-percent">80%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressorange" id="progress-jquery"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>Spring Framework</h3>
+                <span class="percent" id="spring-percent">90%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressred" id="progress-spring"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>Spring Boot</h3>
+                <span class="percent" id="springboot-percent">90%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressblue" id="progress-springboot"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>AJAX</h3>
+                <span class="percent" id="ajax-percent">80%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressgreen" id="progress-ajax"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>C#</h3>
+                <span class="percent" id="csharp-percent">95%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progresspurple" id="progress-csharp"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>JavaScript</h3>
+                <span class="percent" id="javascript-percent">90%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressorange" id="progress-javascript"></span>
+            </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>Java</h3>
+                <span class="percent" id="java-percent">90%</span>
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressred" id="progress-java"></span>
+            </div>
+        </li><br>
+        <div class="custom-button-wrapper">
+          <div class="custom-button-container">
+              <button class="custom-btn btn-3"  onclick="location.href='index.html'">
+                  <span>戻る</span>
+              </button>
+          </div>
+        </div>
+    
+    </ul>
+
+    <script>
+        var skills = {
+            "unity-vr": "100%",
+            "unity-ar": "100%",
+            "html": "80%",
+            "css": "70%",
+            "jquery": "80%",
+            "spring": "90%",
+            "springboot": "90%",
+            "ajax": "80%",
+            "csharp": "95%",
+            "javascript": "90%",
+            "java": "90%"
+        };
+
+        $.each(skills, function(skill, percent) {
+            $('#' + skill + '-percent').html(percent);
+            $('#' + skill).css('width', percent);
+        });
+    </script>
+</body>
+</html>

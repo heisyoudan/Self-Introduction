@@ -7,7 +7,7 @@
   --primary: hsla(330, 81%, 55%, 0.843);
   --primaryBg: hsla(155, 100%, 65%, 1%);
   --primaryHi: hsla(155, 100%, 75%, 25%);
-  --primaryFg: hsl(155, 100%, 85%);
+  --primaryFg: hsl(0, 100%, 85%);
   --secondary: hsl(156, 51%, 14%);
   --secondaryFg: hsl(156, 51%, 75%);
   --secondaryBg: hsla(156, 51%, 14%, 5%);
