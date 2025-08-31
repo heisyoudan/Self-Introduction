@@ -2,379 +2,67 @@
 
 *,
 *:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+*:after { margin:0; padding:0; box-sizing:border-box; }
 
 h1 {
-	font-size: 2em;
-	margin: 0 0 1rem;
-	padding-top: 1.5rem;
-	text-align: center;
-     color: hsla(330, 81%, 55%, 0.843);
+  font-size: 2em;
+  margin: 0 0 1rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: hsla(330, 81%, 55%, 0.843);
 }
 
 html, body {
-    background: #000000;
-    width: 100%;
-    height: 100%;
-    font-family: Futura,  'IBM Plex Sans', sans-serif;
+  background:#000;
+  width:100%; height:100%;
+  font-family: Futura, 'IBM Plex Sans', sans-serif;
 }
 
 .skills-bar-container {
-    position: relative;
-    width: 40%;
-    min-width: 300px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    list-style: none;
+  position:relative;
+  width:40%; min-width:300px;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  list-style:none;
 }
 
 .skills-bar-container li {
-    position: relative;
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
+  position:relative;
+  width:100%;
+  padding:5px; margin-bottom:10px;
 }
 
-.skills-bar-container .progressbar-title {
-    color: #fff;
-}
-
-.skills-bar-container .progressbar-title h3 {
-    display: inline-block;
-}
-
-.skills-bar-container .progressbar-title .percent {
-    position: absolute;
-    right: 5px;
-}
+.skills-bar-container .progressbar-title { color:#fff; }
+.skills-bar-container .progressbar-title h3 { display:inline-block; }
+.skills-bar-container .progressbar-title .percent { position:absolute; right:5px; }
 
 .skills-bar-container .bar-container {
-    background: #555;
-    position: relative;
-    width: 100%;
-    height: 5px;
-    margin-top: 5px;
-    display: block;
-    border-radius: 5px;
+  background:#333; /* 更深一点，暗黑风更好看 */
+  position:relative;
+  width:100%; height:6px;
+  margin-top:6px; display:block;
+  border-radius:6px;
 }
 
 .skills-bar-container .bar-container .progressbar {
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    border-radius: 5px;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  position:absolute;
+  width:0%; height:100%;
+  border-radius:6px;
+  transition: width .9s ease-out; /* 用过渡实现动画 */
 }
 
-.skills-bar-container .bar-container #progress-unity-vr {
-    -webkit-animation-name: progress-unity-vr;
-    animation-name: progress-unity-vr;
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-}
+/* —— 统一颜色，不重复 —— */
+.progressred      { background-color:#ff7a00; }
+.progressblue     { background-color:#1199ff; }
+.progressgreen    { background-color:#00ed63; }
+.progressorange   { background-color:#ff4db8; } /* 粉橘 */
+.progresspurple   { background-color:#9b59b6; }
+.progresscyan     { background-color:#00d3ff; }
+.progressyellow   { background-color:#ffd400; }
+.progresspink     { background-color:#ff3d6e; }
+.progressteal     { background-color:#14b8a6; } /* 青绿 */
 
-.skills-bar-container .bar-container #progress-unity-ar {
-    -webkit-animation-name: progress-unity-ar;
-    animation-name: progress-unity-ar;
-    -webkit-animation-delay: 1.4s;
-    animation-delay: 1.4s;
-}
-
-.skills-bar-container .bar-container #progress-html {
-    -webkit-animation-name: progress-html;
-    animation-name: progress-html;
-    -webkit-animation-delay: 2.1s;
-    animation-delay: 2.1s;
-}
-
-.skills-bar-container .bar-container #progress-css {
-    -webkit-animation-name: progress-css;
-    animation-name: progress-css;
-    -webkit-animation-delay: 2.8s;
-    animation-delay: 2.8s;
-}
-
-.skills-bar-container .bar-container #progress-jquery {
-    -webkit-animation-name: progress-jquery;
-    animation-name: progress-jquery;
-    -webkit-animation-delay: 3.5s;
-    animation-delay: 3.5s;
-}
-
-.skills-bar-container .bar-container #progress-spring {
-    -webkit-animation-name: progress-spring;
-    animation-name: progress-spring;
-    -webkit-animation-delay: 4.2s;
-    animation-delay: 4.2s;
-}
-
-.skills-bar-container .bar-container #progress-springboot {
-    -webkit-animation-name: progress-springboot;
-    animation-name: progress-springboot;
-    -webkit-animation-delay: 4.9s;
-    animation-delay: 4.9s;
-}
-
-.skills-bar-container .bar-container #progress-ajax {
-    -webkit-animation-name: progress-ajax;
-    animation-name: progress-ajax;
-    -webkit-animation-delay: 5.6s;
-    animation-delay: 5.6s;
-}
-
-.skills-bar-container .bar-container #progress-csharp {
-    -webkit-animation-name: progress-csharp;
-    animation-name: progress-csharp;
-    -webkit-animation-delay: 6.3s;
-    animation-delay: 6.3s;
-}
-
-.skills-bar-container .bar-container #progress-javascript {
-    -webkit-animation-name: progress-javascript;
-    animation-name: progress-javascript;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
-}
-
-.skills-bar-container .bar-container #progress-java {
-    -webkit-animation-name: progress-java;
-    animation-name: progress-java;
-    -webkit-animation-delay: 7.7s;
-    animation-delay: 7.7s;
-}
-
-.progressred {
-    background-color: hsla(33, 99%, 50%, 0.859);
-}
-
-.progressblue {
-    background-color: #1199ff;
-}
-
-.progresspurple {
-    background-color: #9b59b6;
-}
-
-.progressorange {
-    background-color: hsla(330, 81%, 55%, 0.843);
-}
-
-.progressgreen {
-    background-color: #00ed63;
-}
-
-@-webkit-keyframes progress-unity-vr {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@-webkit-keyframes progress-unity-ar {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@-webkit-keyframes progress-html {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@-webkit-keyframes progress-css {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 70%;
-    }
-}
-
-@-webkit-keyframes progress-jquery {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@-webkit-keyframes progress-spring {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@-webkit-keyframes progress-springboot {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@-webkit-keyframes progress-ajax {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@-webkit-keyframes progress-csharp {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 95%;
-    }
-}
-
-@-webkit-keyframes progress-javascript {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@-webkit-keyframes progress-java {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes progress-unity-vr {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes progress-unity-ar {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes progress-html {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@keyframes progress-css {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 70%;
-    }
-}
-
-@keyframes progress-jquery {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@keyframes progress-spring {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes progress-springboot {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes progress-ajax {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@keyframes progress-csharp {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 95%;
-    }
-}
-
-@keyframes progress-javascript {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes progress-java {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
-}
+/* 小屏适配 */
 @media only screen and (max-width: 600px) {
-    body {
-        transform: scale(1.5);
-        transform-origin: top left;
-    }
+  body { transform: scale(1.2); transform-origin: top left; }
 }
