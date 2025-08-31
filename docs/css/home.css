@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem 1rem;
+    align-items: center;
+  }
+  
+  .lang-switch.in-nav {
+    margin-left: auto;
+    display: flex;
+    gap: .5rem;
+  }
+  
+  @media (max-width: 768px){
+    .lang-switch,
+    .lang-switch.in-nav,
+    .i18n-switch {
+      position: fixed !important;
+      top: 14px !important;
+      right: 16px !important;
+      left: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+      margin: 0 !important;
+      z-index: 9999 !important;
+    }
+  }
+  
+  @media (max-width: 768px){
+    body { padding-top: 8px; } 
+  }
+  

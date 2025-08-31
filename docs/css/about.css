@@ -12,16 +12,20 @@
     }
 }
 
-:root {
-    animation: updatePerc linear;
-    animation-timeline: scroll();
-    
-    /* create some custom props to derive different effects*/
-    --start-hue: 330; /* 起始颜色的色调 */
-    --primary-color: hsla(calc(var(--start-hue) - var(--percentage) * 1), 81%, 55%, 0.843); /* 颜色渐变 */
+:root{
+    animation-name: updatePerc;
+    animation-duration: 1s;           
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  
+    animation-timeline: scroll(root block);
+    animation-range: 0% 100%;
+  
+    --start-hue: 330;
+    --primary-color: hsla(calc(var(--start-hue) - var(--percentage) * 1), 81%, 55%, 0.843);
     --angle: calc(var(--percentage, 0) * 3.6deg);
     --txt: calc(var(--percentage));
-}
+  }
 
 /* Drawing the arc */
 .progress:after {
@@ -107,7 +111,7 @@ h1 {
     color: var(--primary-color);
     background: #121212;
     font-size: 5em;
-    line-height: 1.2; /* 修改字体行间距 */
+    line-height: 1.2; 
     z-index: 1;
     padding-block: 2rem;
     margin-inline: -2em;
@@ -115,6 +119,6 @@ h1 {
 }
 
 p {
-    font-size: 1.8em; /* 修改字体大小 */
-    line-height: 2; /* 修改字体行间距 */
+    font-size: 1.8em; 
+    line-height: 2; 
 }

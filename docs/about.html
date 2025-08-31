@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/buttons.css" />
     <link rel="stylesheet" href="./css/about.css" />
+    
   </head>
 
   <body>
@@ -40,6 +41,21 @@
       </div>
     </div>
 
+    <script>
+      // 不支持 scroll-timeline 的浏览器用 JS 兜底
+      if (!CSS.supports('animation-timeline: scroll()')) {
+        const root = document.documentElement;
+        const update = () => {
+          const s = root.scrollTop || document.body.scrollTop;
+          const h = (root.scrollHeight - root.clientHeight) || 1;
+          const p = Math.max(0, Math.min(100, Math.round((s / h) * 100)));
+          root.style.setProperty('--percentage', p);
+        };
+        document.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+      }
+    </script>
     
     <script src="./js/i18n.js"></script>
   </body>
