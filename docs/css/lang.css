@@ -1,0 +1,64 @@
+
+.lang-switch {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,.35);
+    padding: 8px 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 0 20px rgba(17,153,255,.25);
+  }
+  
+  
+  .lang-btn {
+    position: static;            
+    width: auto;
+    height: auto;
+    clip-path: none;
+    display: inline-flex;          
+    align-items: center;
+    justify-content: center;
+  
+    appearance: none;
+    border: 1px solid rgba(255,255,255,.18);
+    background: linear-gradient(180deg, rgba(30,30,30,.9), rgba(10,10,10,.9));
+    color: #e6f0ff;
+    font: 600 12px/1 Futura, 'IBM Plex Sans', system-ui, sans-serif;
+    padding: 8px 10px;
+    border-radius: 10px;
+    letter-spacing: .2px;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .lang-btn:hover { transform: translateY(-1px); }
+  .lang-btn[data-lang="ja"] { box-shadow: 0 0 10px rgba(155,89,182,.35); }
+  .lang-btn[data-lang="zh"] { box-shadow: 0 0 10px rgba(255,77,184,.35); }
+  .lang-btn.active {
+    border-color: hsla(330, 81%, 55%, 0.9);
+    box-shadow: 0 0 12px hsla(330,81%,55%,.55), 0 0 26px rgba(17,153,255,.35) inset;
+  }
+  
+
+  .lang-switch.in-nav {
+    position: static;         
+    margin-left: auto;        
+    background: rgba(0,0,0,.20);
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: none;
+    padding: 6px 8px;
+    border-radius: 12px;
+  }
+  .lang-switch.in-nav .lang-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  @media (max-width: 1000px) {
+    .lang-switch.in-nav { align-self: flex-end; margin-top: 8px; }
+  }
+  
