@@ -6,14 +6,18 @@
 
   const DICTS = {
     "ja": {
-      "index.title": "ようこそ、私の世界へ！",
+      "index.title": "何暁丹 | Java開発 | Unity VR/AR | ポートフォリオ",
       "nav.home": "ホーム",
       "nav.about": "自己紹介",
       "nav.projects": "プロジェクト紹介",
       "nav.timeline": "キャリアタイムライン",
       "nav.skills": "技術スキル",
+      "nav.github": "GitHub",
       "index.hero.hello": "初めまして、",
       "index.hero.name": "何暁丹と申します。",
+      "index.hero.subtitle": "Java開発 | Unity VR/AR | macOS/iosアプリ開発",
+      "index.cta.about": "自己紹介を見る",
+      "index.cta.projects": "プロジェクトを見る",
 
       "about.title": "自己紹介",
       "common.back": "戻る",
@@ -72,14 +76,18 @@
       "common.back": "戻る"
     },
     "zh": {
-      "index.title": "欢迎来到我的世界！",
+      "index.title": "何暁丹 | Java开发 | Unity VR/AR | 作品集",
       "nav.home": "首页",
       "nav.about": "自我介绍",
       "nav.projects": "项目介绍",
       "nav.timeline": "职业时间线",
       "nav.skills": "技术技能",
+      "nav.github": "GitHub",
       "index.hero.hello": "初次见面，",
       "index.hero.name": "我叫何晓丹。",
+      "index.hero.subtitle": "Java开发 | Unity VR/AR | macOS/ios应用开发",
+      "index.cta.about": "查看自我介绍",
+      "index.cta.projects": "查看项目",
 
       "about.title": "自我介绍",
       "common.back": "返回",

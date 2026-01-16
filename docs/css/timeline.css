@@ -36,23 +36,41 @@ h1 {
     color: hsla(330, 81%, 55%, 0.843);
 }
 .btn {
-	background-color: var(--fg);
-	border-radius: 0.25em;
-	color: var(--bg);
+	background: linear-gradient(135deg, hsla(330, 81%, 55%, 0.8), hsla(330, 81%, 45%, 0.9));
+	border: 2px solid hsla(330, 81%, 55%, 0.4);
+	border-radius: 8px;
+	color: #ffffff;
 	cursor: pointer;
-	padding: 0.375em 0.75em;
-	transition:
-		background-color calc(var(--trans-dur) / 2) linear,
-		color var(--trans-dur);
+	padding: 0.75em 1.5em;
+	font-weight: 600;
+	font-size: 0.9em;
+	box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	-webkit-tap-highlight-color: transparent;
 }
 .btn:hover {
-	background-color: hsl(var(--hue),10%,50%);
+	background: linear-gradient(135deg, hsla(330, 81%, 65%, 0.9), hsla(330, 81%, 55%, 1));
+	border-color: hsla(330, 81%, 65%, 0.6);
+	box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+	transform: translateY(-2px);
+}
+.btn:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4);
+}
+.btn:focus {
+	outline: 2px solid hsla(330, 81%, 55%, 0.6);
+	outline-offset: 2px;
+}
+.btn:focus:not(:focus-visible) {
+	outline: none;
 }
 .btn-group {
 	display: flex;
-	gap: 0.375em;
-	margin-bottom: 1.5em;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .timeline {
 	margin: auto;
@@ -127,6 +145,29 @@ h1 {
 	right: 2.625em;
 	left: auto;
 	transform: translateX(50%);
+}
+
+/* 移动设备适配 */
+@media (max-width: 768px) {
+	.btn-group {
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.btn {
+		padding: 0.6em 1.2em;
+		font-size: 0.85em;
+		min-width: 120px;
+	}
+	
+	.timeline {
+		padding: 0 1rem;
+	}
+	
+	h1 {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+	}
 }
 .timeline__item-header {
 	display: flex;

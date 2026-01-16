@@ -1,14 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>自己紹介</title>
+    <title data-i18n="about.title">自己紹介 | 何暁丹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/buttons.css" />
+    <meta name="description" content="何暁丹の自己紹介ページです。Unity VR/ARエンジニアとJavaバックエンド開発者としての経験をご覧ください。" />
+    <meta name="author" content="何暁丹" />
+    <meta name="keywords" content="何暁丹, VRエンジニア, ARエンジニア, Unity開発, Javaエンジニア, バックエンド開発" />
+    <link rel="stylesheet" href="./css/buttons.css" />
     <link rel="stylesheet" href="./css/about.css" />
-    
+    <link rel="stylesheet" href="./css/lang.css" />
   </head>
 
   <body>
+    <div class="lang-switch" aria-label="Language Switcher" role="group">
+      <button data-lang="ja" class="lang-btn" title="日本語">JA</button>
+      <button data-lang="zh" class="lang-btn" title="中文">中文</button>
+    </div>
+
     <div class="progress">
       <span class="progress__txt"></span>
     </div>
