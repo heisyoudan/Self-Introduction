@@ -15,7 +15,7 @@
       "nav.github": "GitHub",
       "index.hero.hello": "初めまして、",
       "index.hero.name": "何暁丹と申します。",
-      "index.hero.subtitle": "Java開発 | Unity VR/AR | macOS/iosアプリ開発",
+      "index.hero.subtitle": "Java / Unity VR・AR / macOS & iOS",
       "index.cta.about": "自己紹介を見る",
       "index.cta.projects": "プロジェクトを見る",
 
@@ -85,7 +85,7 @@
       "nav.github": "GitHub",
       "index.hero.hello": "初次见面，",
       "index.hero.name": "我叫何晓丹。",
-      "index.hero.subtitle": "Java开发 | Unity VR/AR | macOS/ios应用开发",
+      "index.hero.subtitle": "Java / Unity VR・AR / macOS & iOS",
       "index.cta.about": "查看自我介绍",
       "index.cta.projects": "查看项目",
 

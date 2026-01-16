@@ -7,30 +7,30 @@
 .custom-button-wrapper .custom-btn {
   width: 130px;
   height: 40px;
-  color:  #17181C;
-  border-radius: 5px;
+  color: #ffffff;
+  border-radius: 12px;
   padding: 10px 25px;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1em;
+  font-family: Futura, 'IBM Plex Sans', sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-              7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-              4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
+  letter-spacing: 0.5px;
 }
 
 .custom-button-wrapper .btn-3 {
-  background: rgb(238, 0, 210);
-  background: linear-gradient(0deg, rgb(252, 1, 160) 0%, #ff0149 100%);
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(168, 85, 247, 0.1));
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
   padding: 0;
-  border: none;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.25);
+  backdrop-filter: blur(10px);
 }
 
 .custom-button-wrapper .btn-3 span {
@@ -38,6 +38,9 @@
   display: block;
   width: 100%;
   height: 100%;
+  color: #ec4899;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .custom-button-wrapper .btn-3::before,
@@ -46,7 +49,7 @@
   content: "";
   right: 0;
   top: 0;
-  background: rgb(255, 0, 174);
+  background: rgba(236, 72, 153, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -61,8 +64,10 @@
 }
 
 .custom-button-wrapper .btn-3:hover {
-  background: transparent;
-  box-shadow: none;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.25), rgba(168, 85, 247, 0.18));
+  border-color: rgba(236, 72, 153, 0.6);
+  box-shadow: 0 6px 25px rgba(236, 72, 153, 0.4);
+  transform: translateY(-2px);
 }
 
 .custom-button-wrapper .btn-3:hover::before {
@@ -74,7 +79,7 @@
 }
 
 .custom-button-wrapper .btn-3 span:hover {
-  color: rgb(255, 0, 174);
+  color: #f472b6;
 }
 
 .custom-button-wrapper .btn-3 span::before,
@@ -83,7 +88,7 @@
   content: "";
   left: 0;
   bottom: 0;
-  background: rgb(233, 47, 140);
+  background: rgba(236, 72, 153, 0.3);
   transition: all 0.3s ease;
 }
 

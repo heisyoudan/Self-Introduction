@@ -7,7 +7,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 body {
 	--color-text: #f1f1f1;
-    --color-bg: #0c0c0c;
+    --color-bg: hsl(0, 0%, 7%);
     --color-link: hsla(330, 81%, 55%, 0.843);
     --color-link-hover: #f1f1f1;
 	--color-deco: #141414;

@@ -2,9 +2,9 @@
 
 :root {
   --text: hsl(0, 0%, 99%);
-  --textDim: hsl(0, 0%, 60%);
+  --textDim: hsl(0, 0%, 70%);
   --background: hsl(0, 0%, 7%);
-  --primary: hsla(330, 81%, 55%, 0.843);
+  --primary: hsla(330, 81%, 55%, 0.9);
   --primaryBg: hsla(155, 100%, 65%, 1%);
   --primaryHi: hsla(155, 100%, 75%, 25%);
   --primaryFg: hsl(0, 100%, 85%);
@@ -73,6 +73,7 @@ nav {
   justify-content: center;
   align-self: center;
   z-index: -1;
+  opacity: 1;
 }
 
 .grid-svg {
@@ -80,6 +81,7 @@ nav {
   width: 80%;
   position: relative;
   z-index: 1;
+  opacity: 0.8;
 }
 
 .blur {
@@ -90,6 +92,7 @@ nav {
   border-radius: 100px;
   z-index: 0;
   position: absolute;
+  opacity: 0.6;
 }
 
 .title {
@@ -346,47 +349,48 @@ nav a.sitename:hover {
 
 /* Hero subtitle container and styles */
 .hero-subtitle-container {
-  margin: 1rem 0 2rem;
+  margin: 1.5rem 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-family: 'Fira Code', 'SF Mono', 'Consolas', monospace;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 500;
-  color: var(--textDim);
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.15rem;
   text-align: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.03) 0%, 
-    rgba(236, 72, 153, 0.08) 50%, 
-    rgba(255, 255, 255, 0.03) 100%);
-  border: 1px solid rgba(236, 72, 153, 0.2);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
+  padding: 0;
   margin: 0;
   line-height: 1.4;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #f0f0f0 40%,
+    #ec4899 50%,
+    #a855f7 55%,
+    #f0f0f0 60%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
-.hero-subtitle::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
-  animation: subtitle-shine 3s ease-in-out infinite;
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
 }
 
-@keyframes subtitle-shine {
-  0% { left: -100%; }
-  50% { left: 100%; }
-  100% { left: 100%; }
+.code-bracket {
+  display: none;
 }
 
 .cta-buttons {
@@ -490,12 +494,16 @@ nav a.sitename:hover {
 
   .hero-subtitle-container {
     margin: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  .code-bracket {
+    font-size: 1.2rem;
   }
 
   .hero-subtitle {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
-    border-radius: 12px;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
   }
 
   .cta-buttons {
@@ -512,21 +520,30 @@ nav a.sitename:hover {
     flex-direction: column;
     align-items: stretch;
     padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: 0.5rem;
   }
 
   .nav-left {
     width: 100%;
+    flex-direction: column;
   }
 
   .nav-left a {
-    padding: 0.6rem 1rem;
+    padding: 0.8rem 1rem;
     font-size: 0.9rem;
     text-align: center;
+    margin-bottom: 0.2rem;
   }
 
   .nav-right {
     align-self: center;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 0.5rem;
   }
 
   .github-link span {
