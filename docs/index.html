@@ -12,7 +12,17 @@
   <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-  <nav role="navigation" aria-label="メインナビゲーション">
+  <!-- 移动端汉堡菜单按钮 -->
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- 移动端菜单遮罩 -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <nav role="navigation" aria-label="メインナビゲーション" id="mainNav">
     <div class="nav-left">
       <a class="sitename" data-i18n="nav.home" href="index.html">ホーム</a>
       <a class="menu" data-i18n="nav.about" href="about.html">自己紹介</a>
@@ -72,5 +82,31 @@
        xmlns="http://www.w3.org/2000/svg"></svg>
 
   <script src="./js/i18n.js"></script>
+  <script>
+    // 汉堡菜单功能
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const menuOverlay = document.getElementById('menuOverlay');
+    
+    function toggleMenu() {
+      const isOpen = hamburger.classList.toggle('active');
+      mainNav.classList.toggle('nav-open');
+      menuOverlay.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    
+    hamburger.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+    
+    // 点击菜单项后关闭菜单
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
