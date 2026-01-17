@@ -4,6 +4,9 @@
 	margin: 0;
 	padding: 0;
 }
+html {
+	padding-top: env(safe-area-inset-top);
+}
 :root {
 	--hue: 223;
     --bg: hsl(0, 0%, 7%);
@@ -23,43 +26,50 @@ button {
 }
 body {
 	background-color: var(--bg);
-	height: 100vh;
+	min-height: 100vh;
 	transition:
 		background-color var(--trans-dur),
 		color var(--trans-dur);
+	padding-top: 2rem;
 }
 h1 {
 	font-size: 2em;
 	margin: 0 0 3rem;
-	padding-top: 1.5rem;
+	padding-top: 0;
 	text-align: center;
     color: hsla(330, 81%, 55%, 0.843);
 }
 .btn {
-	background: linear-gradient(135deg, hsla(330, 81%, 55%, 0.8), hsla(330, 81%, 45%, 0.9));
-	border: 2px solid hsla(330, 81%, 55%, 0.4);
-	border-radius: 8px;
-	color: #ffffff;
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border: none;
+	border-radius: 50px; /* 胶囊形状 */
+	color: rgba(255, 255, 255, 0.8);
 	cursor: pointer;
-	padding: 0.75em 1.5em;
+	padding: 0.7em 1.5em;
 	font-weight: 600;
 	font-size: 0.9em;
-	box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
-	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: 
+		0 8px 32px rgba(0, 0, 0, 0.2),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	transition: all 0.25s ease;
 	-webkit-tap-highlight-color: transparent;
 }
 .btn:hover {
-	background: linear-gradient(135deg, hsla(330, 81%, 65%, 0.9), hsla(330, 81%, 55%, 1));
-	border-color: hsla(330, 81%, 65%, 0.6);
-	box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+	background: rgba(236, 72, 153, 0.2);
+	color: #ec4899;
+	box-shadow: 
+		0 12px 40px rgba(236, 72, 153, 0.2),
+		inset 0 1px 0 rgba(255, 255, 255, 0.15);
 	transform: translateY(-2px);
 }
 .btn:active {
 	transform: translateY(0);
-	box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 .btn:focus {
-	outline: 2px solid hsla(330, 81%, 55%, 0.6);
+	outline: 2px solid rgba(236, 72, 153, 0.5);
 	outline-offset: 2px;
 }
 .btn:focus:not(:focus-visible) {
@@ -149,6 +159,10 @@ h1 {
 
 /* 移动设备适配 */
 @media (max-width: 768px) {
+	body {
+		padding-top: 3rem;
+	}
+
 	.btn-group {
 		gap: 0.5rem;
 		margin-bottom: 1.5rem;
