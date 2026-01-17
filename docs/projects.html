@@ -51,6 +51,14 @@
       <title>home</title>
       <path d="M3 10.5l9-7 9 7V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <title>github</title>
+      <path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.74c0 4.93 3.19 9.1 7.61 10.57.56.1.76-.24.76-.53 0-.26-.01-1.12-.02-2.03-3.09.67-3.74-1.49-3.74-1.49-.5-1.28-1.22-1.62-1.22-1.62-.99-.68.08-.66.08-.66 1.1.08 1.68 1.13 1.68 1.13.97 1.66 2.55 1.18 3.17.9.1-.7.38-1.18.69-1.45-2.47-.28-5.07-1.24-5.07-5.52 0-1.22.44-2.22 1.16-3-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.11 1.16a10.8 10.8 0 0 1 5.66 0c2.16-1.47 3.11-1.16 3.11-1.16.61 1.57.23 2.73.11 3.02.72.78 1.16 1.78 1.16 3 0 4.29-2.61 5.23-5.09 5.51.39.34.73 1.01.73 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.63.77.52 4.42-1.48 7.61-5.65 7.61-10.58C23.25 5.48 18.27.5 12 .5z"/>
+    </symbol>
+    <symbol id="icon-video" viewBox="0 0 24 24">
+      <title>video</title>
+      <path fill="currentColor" d="M21 6.5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-11zM10 16V8l6 4-6 4z"/>
+    </symbol>
   </svg>
 
   <main>
@@ -58,12 +66,16 @@
 		<header class="codrops-header">
 
 			<div class="page-actions">
-			  <button class="action-btn home" type="button"
-					  onclick="location.href='index.html';"
-					  aria-label="ホーム">
-				<svg class="icon"><use xlink:href="#icon-home"></use></svg>
-				<span data-i18n="common.home">ホーム</span>
-			  </button>
+              <button class="action-btn home icon-only" type="button"
+                      onclick="location.href='index.html';"
+                      aria-label="ホーム">
+                <svg class="icon"><use xlink:href="#icon-home"></use></svg>
+              </button>
+              <!-- Language switch (一致的放在按钮旁) -->
+              <div class="lang-switch in-nav" aria-label="Language Switcher" role="group">
+                <button data-lang="ja" class="lang-btn" title="日本語">JA</button>
+                <button data-lang="zh" class="lang-btn" title="中文">中文</button>
+              </div>
 			</div>
 		  </header>
     </div>
@@ -131,6 +143,26 @@
         </div>
       </div>
 
+      <div class="slide">
+        <div class="slide__img-wrap"><div class="slide__img" style="background-image: url(img/7.png);"></div></div>
+        <div class="slide__side">Project &amp; Introduction</div>
+        <div class="slide__title-wrap">
+          <span class="slide__number">7</span>
+          <h3 class="slide__title" data-i18n="projects.item7.title">大手決済基盤刷新プロジェクト</h3>
+          <h4 class="slide__subtitle" data-i18n="projects.item7.industry">開発業種：金融・決済システム</h4>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide__img-wrap"><div class="slide__img" style="background-image: url(img/8.png);"></div></div>
+        <div class="slide__side">Project &amp; Introduction</div>
+        <div class="slide__title-wrap">
+          <span class="slide__number">8</span>
+          <h3 class="slide__title" data-i18n="projects.item8.title">Omit (macOS向けシステムモニター)</h3>
+          <h4 class="slide__subtitle" data-i18n="projects.item8.industry">開発業種：macOSアプリ</h4>
+        </div>
+      </div>
+
       <button class="nav nav--prev">
         <svg class="icon icon--navarrow-prev"><use xlink:href="#icon-navarrow"></use></svg>
       </button>
@@ -144,7 +176,10 @@
         <span class="content__number">1</span>
         <h3 class="content__title" data-i18n="projects.item1.title">鄂州製鋼所デジタルツインのプロジェクト</h3>
         <h4 class="content__subtitle">
-          <a class="underline-link" href="https://1drv.ms/f/s!ApmvHuIZS7NH734r2opVDz_NfUgF?e=E8RTCJ" target="_blank" rel="noopener" data-i18n="projects.more">詳しくはこちら</a>
+          <a class="action-btn learn-more video-link" href="https://1drv.ms/f/s!ApmvHuIZS7NH734r2opVDz_NfUgF?e=E8RTCJ" target="_blank" rel="noopener">
+            <svg class="icon"><use xlink:href="#icon-video"></use></svg>
+            <span data-i18n="projects.more">詳しくはこちら</span>
+          </a>
         </h4>
         <div class="content__text" data-i18n-html="projects.item1.body_html">
           製鋼所をシステムに複製し、生産現場で発生する様々な形式のデータと接続できます。…（略）
@@ -155,7 +190,10 @@
         <span class="content__number">2</span>
         <h3 class="content__title" data-i18n="projects.item2.title">VR消防訓練体験</h3>
         <h4 class="content__subtitle">
-          <a class="underline-link" href="https://1drv.ms/u/s!ApmvHuIZS7NH73pCdtLAFPWxUCmN?e=Aa43ua" target="_blank" rel="noopener" data-i18n="projects.more">詳しくはこちら</a>
+          <a class="action-btn learn-more video-link" href="https://1drv.ms/u/s!ApmvHuIZS7NH73pCdtLAFPWxUCmN?e=Aa43ua" target="_blank" rel="noopener">
+            <svg class="icon"><use xlink:href="#icon-video"></use></svg>
+            <span data-i18n="projects.more">詳しくはこちら</span>
+          </a>
         </h4>
         <div class="content__text" data-i18n-html="projects.item2.body_html">水力発電所では、従業員向けのVR研修アプリを…</div>
       </div>
@@ -164,7 +202,10 @@
         <span class="content__number">3</span>
         <h3 class="content__title" data-i18n="projects.item3.title">作業中の高所からの墜落体験</h3>
         <h4 class="content__subtitle">
-          <a class="underline-link" href="https://1drv.ms/u/s!ApmvHuIZS7NH73mxHP_X2rVvKCTX?e=RTW0Dq" target="_blank" rel="noopener" data-i18n="projects.more">詳しくはこちら</a>
+          <a class="action-btn learn-more video-link" href="https://1drv.ms/u/s!ApmvHuIZS7NH73mxHP_X2rVvKCTX?e=RTW0Dq" target="_blank" rel="noopener">
+            <svg class="icon"><use xlink:href="#icon-video"></use></svg>
+            <span data-i18n="projects.more">詳しくはこちら</span>
+          </a>
         </h4>
         <div class="content__text" data-i18n-html="projects.item3.body_html">作業中の高所からの墜落の事故を完全再現し…</div>
       </div>
@@ -173,7 +214,10 @@
         <span class="content__number">4</span>
         <h3 class="content__title" data-i18n="projects.item4.title">訓練分野におけるVRのシステム</h3>
         <h4 class="content__subtitle">
-          <a class="underline-link" href="https://1drv.ms/u/s!ApmvHuIZS7NH73i4yWg3Fm1f5V6K?e=03aIN3" target="_blank" rel="noopener" data-i18n="projects.more">詳しくはこちら</a>
+          <a class="action-btn learn-more video-link" href="https://1drv.ms/u/s!ApmvHuIZS7NH73i4yWg3Fm1f5V6K?e=03aIN3" target="_blank" rel="noopener">
+            <svg class="icon"><use xlink:href="#icon-video"></use></svg>
+            <span data-i18n="projects.more">詳しくはこちら</span>
+          </a>
         </h4>
         <div class="content__text" data-i18n-html="projects.item4.body_html">Hi5 VRグローブを装着して、仮想空間に没入し…</div>
       </div>
@@ -182,7 +226,10 @@
         <span class="content__number">5</span>
         <h3 class="content__title" data-i18n="projects.item5.title">ARグラスを装着した巡視点検業務用のアプリケーション</h3>
         <h4 class="content__subtitle">
-          <a class="underline-link" href="https://1drv.ms/v/s!ApmvHuIZS7NHgsZYsNjoHyQCTrJHHw?e=Ro6M53" target="_blank" rel="noopener" data-i18n="projects.more">詳しくはこちら</a>
+          <a class="action-btn learn-more video-link" href="https://1drv.ms/v/s!ApmvHuIZS7NHgsZYsNjoHyQCTrJHHw?e=Ro6M53" target="_blank" rel="noopener">
+            <svg class="icon"><use xlink:href="#icon-video"></use></svg>
+            <span data-i18n="projects.more">詳しくはこちら</span>
+          </a>
         </h4>
         <div class="content__text" data-i18n-html="projects.item5.body_html">工事現場検査をリモートで実施。…</div>
       </div>
@@ -196,8 +243,31 @@
         </div>
       </div>
 
-      <button class="content__close">
-        <svg class="icon icon--longarrow"><use xlink:href="#icon-longarrow"></use></svg>
+      <div class="content__item">
+        <span class="content__number">7</span>
+        <h3 class="content__title" data-i18n="projects.item7.title">大手決済基盤刷新プロジェクト</h3>
+        <h4 class="content__subtitle" data-i18n="projects.item7.industry">開発業種：金融・決済システム</h4>
+        <div class="content__text" data-i18n-html="projects.item7.body_html">
+          日本大手企業の既存決済システムを対象とした大規模刷新案件。…（略）
+        </div>
+      </div>
+
+      <div class="content__item">
+        <span class="content__number">8</span>
+        <h3 class="content__title" data-i18n="projects.item8.title">Omit (macOS向けシステムモニター)</h3>
+        <h4 class="content__subtitle">
+          <a class="action-btn learn-more" href="https://github.com/heisyoudan/Omit/tree/main" target="_blank" rel="noopener">
+            <svg class="icon"><use xlink:href="#icon-github"></use></svg>
+            <span data-i18n="projects.more">詳しくはこちら</span>
+          </a>
+        </h4>
+        <div class="content__text" data-i18n-html="projects.item8.body_html">
+          <!-- localized content -->
+        </div>
+      </div>
+
+      <button class="content__close back-btn" aria-label="戻る">
+        <svg class="icon"><use xlink:href="#icon-back"></use></svg>
       </button>
     </div>
   </main>

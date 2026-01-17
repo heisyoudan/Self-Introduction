@@ -5,32 +5,43 @@
 }
 
 .custom-button-wrapper .custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #ffffff;
-  border-radius: 12px;
-  padding: 10px 25px;
+  width: auto;
+  height: auto;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px; /* 胶囊形状 */
+  padding: 0.7em 1.5em;
   font-family: Futura, 'IBM Plex Sans', sans-serif;
-  font-size: 0.95em;
+  font-size: 0.9em;
   font-weight: 600;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.25s ease;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   letter-spacing: 0.5px;
+  border: none;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .custom-button-wrapper .btn-3 {
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(168, 85, 247, 0.1));
-  border: 1px solid rgba(236, 72, 153, 0.4);
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  padding: 0;
-  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.25);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  width: auto;
+  height: auto;
+  line-height: 1.5;
+  padding: 0.7em 1.5em;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .custom-button-wrapper .btn-3 span {
@@ -38,76 +49,22 @@
   display: block;
   width: 100%;
   height: 100%;
-  color: #ec4899;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-.custom-button-wrapper .btn-3::before,
-.custom-button-wrapper .btn-3::after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  background: rgba(236, 72, 153, 0.3);
-  transition: all 0.3s ease;
-}
-
-.custom-button-wrapper .btn-3::before {
-  height: 0%;
-  width: 2px;
-}
-
-.custom-button-wrapper .btn-3::after {
-  width: 0%;
-  height: 2px;
-}
-
 .custom-button-wrapper .btn-3:hover {
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.25), rgba(168, 85, 247, 0.18));
-  border-color: rgba(236, 72, 153, 0.6);
-  box-shadow: 0 6px 25px rgba(236, 72, 153, 0.4);
+  background: rgba(236, 72, 153, 0.2);
+  color: #ec4899;
+  box-shadow: 
+    0 12px 40px rgba(236, 72, 153, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
-.custom-button-wrapper .btn-3:hover::before {
-  height: 100%;
-}
-
-.custom-button-wrapper .btn-3:hover::after {
-  width: 100%;
-}
-
-.custom-button-wrapper .btn-3 span:hover {
-  color: #f472b6;
-}
-
-.custom-button-wrapper .btn-3 span::before,
-.custom-button-wrapper .btn-3 span::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  background: rgba(236, 72, 153, 0.3);
-  transition: all 0.3s ease;
-}
-
-.custom-button-wrapper .btn-3 span::before {
-  width: 2px;
-  height: 0%;
-}
-
-.custom-button-wrapper .btn-3 span::after {
-  width: 0%;
-  height: 2px;
-}
-
-.custom-button-wrapper .btn-3 span:hover::before {
-  height: 100%;
-}
-
-.custom-button-wrapper .btn-3 span:hover::after {
-  width: 100%;
+.custom-button-wrapper .btn-3:hover span {
+  color: #ec4899;
 }
 
 .custom-button-wrapper {

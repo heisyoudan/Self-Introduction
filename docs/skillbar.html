@@ -20,27 +20,40 @@
   <ul class="skills-bar-container">
     
     <h1 data-i18n="skills.title">技術スキル</h1>
+
     <li>
       <div class="progressbar-title">
-        <h3>Unity AR Development (ARKit / Vuforia / AR Foundation)</h3>
-        <span class="percent" id="unity-ar-percent">95%</span>
+        <h3>AI-Driven Development (ChatGPT / Gemini / Copilot / Workflow Integration)</h3>
+        <span class="percent" id="ai-driven-percent">95%</span>
       </div>
       <div class="bar-container">
-        <span class="progressbar" id="progress-unity-ar"></span>
+        <span class="progressbar" id="progress-ai-driven"></span>
       </div>
     </li>
+
     <li>
       <div class="progressbar-title">
-        <h3>Unity VR Development (SteamVR / XR Interaction Toolkit / OpenXR)</h3>
+        <h3>Unity VR/AR Development (XR Interaction / AR Foundation / SteamVR)</h3>
         <span class="percent" id="unity-vr-percent">95%</span>
       </div>
       <div class="bar-container">
         <span class="progressbar" id="progress-unity-vr"></span>
       </div>
     </li>
+
     <li>
       <div class="progressbar-title">
-        <h3>C#</h3>
+        <h3>Java / Spring Boot (Backend / Microservices)</h3>
+        <span class="percent" id="java-spring-percent">90%</span>
+      </div>
+      <div class="bar-container">
+        <span class="progressbar" id="progress-java-spring"></span>
+      </div>
+    </li>
+
+    <li>
+      <div class="progressbar-title">
+        <h3>C# (Unity / .NET)</h3>
         <span class="percent" id="csharp-percent">90%</span>
       </div>
       <div class="bar-container">
@@ -50,57 +63,41 @@
 
     <li>
       <div class="progressbar-title">
-        <h3>Java</h3>
-        <span class="percent" id="java-percent">85%</span>
+        <h3>Cloud Native / AWS (DynamoDB / S3 / Serverless)</h3>
+        <span class="percent" id="cloud-aws-percent">80%</span>
       </div>
       <div class="bar-container">
-        <span class="progressbar" id="progress-java"></span>
-      </div>
-    </li>
-    <li>
-      <div class="progressbar-title">
-        <h3>Spring Boot / Spring Framework</h3>
-        <span class="percent" id="spring-percent">85%</span>
-      </div>
-      <div class="bar-container">
-        <span class="progressbar" id="progress-spring"></span>
-      </div>
-    </li>
-    <li>
-      <div class="progressbar-title">
-        <h3>PostgreSQL / SQL</h3>
-        <span class="percent" id="sql-percent">80%</span>
-      </div>
-      <div class="bar-container">
-        <span class="progressbar" id="progress-sql"></span>
-      </div>
-    </li>
-    <li>
-      <div class="progressbar-title">
-        <h3>AWS (S3 / EventBridge)</h3>
-        <span class="percent" id="aws-percent">70%</span>
-      </div>
-      <div class="bar-container">
-        <span class="progressbar" id="progress-aws"></span>
+        <span class="progressbar" id="progress-cloud-aws"></span>
       </div>
     </li>
 
     <li>
       <div class="progressbar-title">
-        <h3>React / JavaScript / TypeScript</h3>
-        <span class="percent" id="react-percent">65%</span>
+        <h3>gRPC / Protocol Buffers (IDL / High Performance)</h3>
+        <span class="percent" id="grpc-percent">80%</span>
       </div>
       <div class="bar-container">
-        <span class="progressbar" id="progress-react"></span>
+        <span class="progressbar" id="progress-grpc"></span>
       </div>
     </li>
+
     <li>
       <div class="progressbar-title">
-        <h3>HTML / CSS / AJAX / jQuery</h3>
-        <span class="percent" id="html-css-percent">60%</span>
+        <h3>PostgreSQL / SQL (RDB / Data Modeling)</h3>
+        <span class="percent" id="postgresql-percent">80%</span>
       </div>
       <div class="bar-container">
-        <span class="progressbar" id="progress-html-css"></span>
+        <span class="progressbar" id="progress-postgresql"></span>
+      </div>
+    </li>
+
+    <li>
+      <div class="progressbar-title">
+        <h3>React / TypeScript (Frontend)</h3>
+        <span class="percent" id="react-ts-percent">65%</span>
+      </div>
+      <div class="bar-container">
+        <span class="progressbar" id="progress-react-ts"></span>
       </div>
     </li>
 
@@ -108,7 +105,6 @@
     <div class="custom-button-wrapper">
       <div class="custom-button-container">
         <button class="custom-btn btn-3" onclick="location.href='index.html'">
-          
           <span data-i18n="common.back">戻る</span>
         </button>
       </div>
@@ -119,21 +115,20 @@
     // 等待 DOM 和 jQuery 都加载完成
     $(document).ready(function() {
       const order = [
-        "unity-ar","unity-vr","csharp",
-        "java","spring","sql","aws",
-        "react","html-css"
+        "ai-driven","unity-vr","java-spring",
+        "csharp","cloud-aws","grpc",
+        "postgresql","react-ts"
       ];
 
       const skills = {
-        "unity-ar": "95%",
+        "ai-driven": "95%",
         "unity-vr": "95%",
+        "java-spring": "90%",
         "csharp": "90%",
-        "java": "85%",
-        "spring": "85%",
-        "sql": "80%",
-        "aws": "70%",
-        "react": "65%",
-        "html-css": "60%"
+        "cloud-aws": "80%",
+        "grpc": "80%",
+        "postgresql": "80%",
+        "react-ts": "65%"
       };
 
       const colorClasses = [
@@ -144,8 +139,7 @@
         "progresspurple",
         "progresscyan",
         "progressyellow",
-        "progresspink",
-        "progressteal"
+        "progresspink"
       ];
 
       // 延迟执行动画，确保页面完全加载

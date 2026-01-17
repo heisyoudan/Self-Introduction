@@ -30,30 +30,7 @@ body {
   overflow: hidden;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  color: var(--textDim);
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 9999;
-  padding: 1rem 0;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+/* 导航样式在 home.css 中定义 */
 
 .menu:hover {
   color: var(--text);
@@ -236,116 +213,7 @@ span {
   opacity: 50%;
 }
 
-/* Navigation link styles */
-nav a {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.75rem 1.2rem;
-  border-radius: 12px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-/* Animated background effect */
-nav a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.1), transparent);
-  transition: left 0.5s ease;
-  z-index: -1;
-}
-
-nav a:hover::before {
-  left: 100%;
-}
-
-nav a:hover {
-  color: var(--text);
-  background: rgba(236, 72, 153, 0.08);
-  border-color: rgba(236, 72, 153, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.15);
-}
-
-nav a.sitename {
-  font-weight: 700;
-  background: linear-gradient(135deg, 
-    rgba(236, 72, 153, 0.1), 
-    rgba(168, 85, 247, 0.1));
-  border: 1px solid rgba(236, 72, 153, 0.2);
-  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);
-}
-
-nav a.sitename:hover {
-  background: linear-gradient(135deg, 
-    rgba(236, 72, 153, 0.15), 
-    rgba(168, 85, 247, 0.15));
-  border-color: rgba(236, 72, 153, 0.4);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(236, 72, 153, 0.25);
-}
-
-/* GitHub link styles */
-.github-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem !important;
-  border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
-}
-
-.github-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-  z-index: -1;
-}
-
-.github-link:hover::before {
-  left: 100%;
-}
-
-.github-link:hover {
-  background: rgba(88, 166, 255, 0.08) !important;
-  border-color: rgba(88, 166, 255, 0.25) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(88, 166, 255, 0.2);
-  color: #58a6ff;
-}
-
-.github-link svg {
-  transition: all 0.3s ease;
-}
-
-.github-link:hover svg {
-  transform: rotate(5deg) scale(1.05);
-}
-
-.github-link span {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
+/* GitHub link styles - 已移至 home.css */
 
 /* Hero subtitle container and styles */
 .hero-subtitle-container {
@@ -395,45 +263,52 @@ nav a.sitename:hover {
 
 .cta-buttons {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* 描边幽灵按钮 - Ghost Button */
 .cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
+  letter-spacing: 0.05em;
   transition: all 0.3s ease;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-primary {
-  background: linear-gradient(135deg, var(--primary), hsl(330, 81%, 45%));
-  color: white;
-  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+.cta-btn:hover {
+  border-color: #ec4899;
+  background: rgba(236, 72, 153, 0.08);
+  color: #ec4899;
 }
 
-.cta-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.6);
-}
-
+/* 移除原有样式 */
+.cta-primary,
 .cta-secondary {
   background: transparent;
-  color: var(--text);
-  border: 2px solid var(--textDim);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: none;
 }
 
+.cta-primary:hover,
 .cta-secondary:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  transform: translateY(-3px);
+  border-color: #ec4899;
+  background: rgba(236, 72, 153, 0.08);
+  color: #ec4899;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Responsive styles */
@@ -450,30 +325,6 @@ nav a.sitename:hover {
   .hero-subtitle {
     font-size: 1.2rem;
     padding: 0.8rem 1.5rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 0.5rem 0;
-  }
-
-  .nav-left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .nav-left a {
-    width: auto;
-    align-self: flex-start;
-  }
-
-  .nav-right {
-    align-self: flex-end;
-    gap: 0.8rem;
   }
 
   .material-icons {

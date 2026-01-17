@@ -344,6 +344,28 @@ a:focus {
 	outline: none;
 }
 
+/* When content close uses back-btn styling, ensure consistent placement and size */
+.content__close.back-btn{
+	top: 1rem;
+	left: 1rem;
+	transform: none;
+	width: 48px;
+	height: 48px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(20,20,20,0.5));
+	border: 1px solid rgba(255,255,255,0.06);
+	box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+.content__close.back-btn .icon{ width: 20px; height: 20px; }
+.content__close.back-btn:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(0,0,0,0.55), 0 0 18px rgba(236,72,153,0.12);
+	border-color: rgba(236,72,153,0.18);
+}
+
 .content__number {
 	font-weight: bold;
 }
